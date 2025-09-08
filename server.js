@@ -2,6 +2,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import heroisRoutes from "./src/routes/heroisRoutes.js"
+import viloesRoutes from "./src/routes/viloesRoutes.js"
 
 // Criar aplicação com Express e configurar para aceitar JSON
 const app = express();
@@ -19,6 +20,7 @@ app.get("/", (req, res) => {
 
 // Aqui vão todas suas Rotas
 app.use("/herois", heroisRoutes);
+app.use("/viloes", viloesRoutes)
 
 // Iniciar servidor escutando na porta definida
 app.listen(serverPort, () => {
